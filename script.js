@@ -3,6 +3,7 @@ var flag = 0;
 var operator = '';
 var ele=document.documentElement;
 var isfirsttime=true;
+//code for full screen mode
 ele.onclick=function(){
     if(this.requestFullscreen){
         ele.requestFullscreen();
@@ -19,6 +20,8 @@ ele.addEventListener("keypress",function(){
         alert("Your browser doesnot support full screen mode");
     }
 }); 
+
+
 var numbtn = document.getElementsByClassName("num");
 Array.from(numbtn).forEach(element => {
     element.addEventListener('click', (e) => {
