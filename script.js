@@ -1,6 +1,24 @@
 var num1 = '', num2 = '';
 var flag = 0;
 var operator = '';
+var ele=document.documentElement;
+var isfirsttime=true;
+ele.onclick=function(){
+    if(this.requestFullscreen){
+        ele.requestFullscreen();
+    }
+    else{
+        alert("Your browser doesnot support full screen mode");
+    }
+}
+ele.addEventListener("keypress",function(){
+    if(this.requestFullscreen){
+        ele.requestFullscreen();
+    }
+    else{
+        alert("Your browser doesnot support full screen mode");
+    }
+}); 
 var numbtn = document.getElementsByClassName("num");
 Array.from(numbtn).forEach(element => {
     element.addEventListener('click', (e) => {
